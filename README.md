@@ -1,8 +1,8 @@
 # SonarQube License-Check
 
-[![Sonarcloud Status](https://sonarcloud.io/api/project_badges/measure?project=at.porscheinformatik.sonarqube.licensecheck:sonarqube-licensecheck-plugin&metric=alert_status)](https://sonarcloud.io/dashboard?id=at.porscheinformatik.sonarqube.licensecheck:sonarqube-licensecheck-plugin)
-
 This [SonarQube](http://www.sonarqube.org/) plugin ensures that projects use dependencies with compliant licenses. All dependencies and licenses can be viewed per projects and exported to Excel 2003 XML Format. This enables a simple governance of dependencies and licenses for the whole organization.
+
+This fork adds processing of [`license-maven-plugin`-style XML files](https://github.com/mojohaus/license-maven-plugin/blob/master/src/main/resources/org/codehaus/mojo/license/licenses.xsd), instead of forking a new Maven process during Sensor execution.
 
 ## License
 
