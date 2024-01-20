@@ -1,7 +1,7 @@
 package at.porscheinformatik.sonarqube.licensecheck;
 
-public class LicenseCheckPropertyKeys
-{
+public class LicenseCheckPropertyKeys {
+
     /**
      * Category for all settings.
      */
@@ -43,30 +43,9 @@ public class LicenseCheckPropertyKeys
     public static final String MAVEN_REUSE_LICENSE_XML = "licensechecks.maven.use-dependency-plugin";
 
     /**
-     * @deprecated replaced with {@link #LICENSE_SET}
+     * Config key to configure the path to look for the license report in the gradle scanner.
      */
-    @Deprecated
-    public static final String LICENSE_KEY = "licensecheck.licenses";
+    public static final String GRADLE_JSON_REPORT_PATH = "licenseCheck.gradle-json-report-path";
 
-    /**
-     * @deprecated replaced with {@link #LICENSE_MAPPING}
-     */
-    @Deprecated
-    public static final String LICENSE_REGEX = "licensecheck.licensesregex";
-
-    /**
-     * @deprecated replaced with {@link #DEPENDENCY_MAPPING}
-     */
-    @Deprecated
-    public static final String ALLOWED_DEPENDENCIES_KEY = "licensecheck.alloweddependencies";
-
-    /**
-     * @deprecated replaced with {@link #PROJECT_LICENSE_SET}
-     */
-    @Deprecated
-    public static final String PROJECT_LICENSE_KEY = "licensecheck.projectlicense";
-
-    private LicenseCheckPropertyKeys()
-    {
-    }
+    private LicenseCheckPropertyKeys() {}
 }
