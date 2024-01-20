@@ -124,12 +124,11 @@ public class MavenDependencyScanner implements Scanner {
                 );
                 LOGGER.warn(mavenExecutionErrors.toString());
             }
-            try (Stream<String> lines = Files.lines(mavenOutputFile)) {
-                return lines
-                    .filter(StringUtils::isNotBlank)
-                    .map(MavenDependencyScanner::findDependency)
-                    .filter(Objects::nonNull);
-            }
+            return Files
+                .lines(mavenOutputFile)
+                .filter(StringUtils::isNotBlank)
+                .map(MavenDependencyScanner::findDependency)
+                .filter(Objects::nonNull);
         } catch (MavenInvocationException e) {
             LOGGER.warn("Could not get dependency list via maven", e);
         } catch (Exception e) {
