@@ -154,10 +154,13 @@ public class LicenseCheckPlugin implements Plugin {
                 .defaultValue("false")
                 .index(2)
                 .build(),
-            PropertyDefinition.builder(LicenseCheckPropertyKeys.MAVEN_REUSE_LICENSE_XML)
+            PropertyDefinition
+                .builder(LicenseCheckPropertyKeys.MAVEN_REUSE_LICENSE_XML)
                 .category(LicenseCheckPropertyKeys.CATEGORY)
                 .name("Reuse licenses.xml")
-                .description("Reuse licenses.xml from already-executed license-maven-plugin:download-licenses instead of resolving dependencies via dependency:list goal")
+                .description(
+                    "Reuse licenses.xml from already-executed license-maven-plugin:download-licenses instead of resolving dependencies via dependency:list goal"
+                )
                 .type(PropertyType.BOOLEAN)
                 .build(),
             PropertyDefinition

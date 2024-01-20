@@ -48,7 +48,9 @@ public class LicenseCheckSensor implements Sensor {
                         .getBoolean(LicenseCheckPropertyKeys.NPM_RESOLVE_TRANSITIVE_DEPS)
                         .orElse(false)
                 ),
-                configuration.getBoolean(LicenseCheckPropertyKeys.MAVEN_REUSE_LICENSE_XML).orElse(false)
+                configuration
+                        .getBoolean(LicenseCheckPropertyKeys.MAVEN_REUSE_LICENSE_XML)
+                        .orElse(false)
                     ? new MavenLicenseScanner(licenseMappingService) // assume license:download-licenses
                     : new MavenDependencyScanner(licenseMappingService), // use dependency:list
                 new GradleDependencyScanner(licenseMappingService),

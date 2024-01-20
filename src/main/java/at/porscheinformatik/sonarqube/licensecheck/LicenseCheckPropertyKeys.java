@@ -40,7 +40,8 @@ public class LicenseCheckPropertyKeys {
     /**
      * Config key to enable/disable dependency:list scanning for Maven
      */
-    public static final String MAVEN_REUSE_LICENSE_XML = "licensechecks.maven.use-dependency-plugin";
+    public static final String MAVEN_REUSE_LICENSE_XML =
+        "licensechecks.maven.use-dependency-plugin";
 
     /**
      * Config key to configure the path to look for the license report in the gradle scanner.
